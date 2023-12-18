@@ -12,7 +12,7 @@ A Python script to ✨ generate new IPv6 address for the device upon IPv6 prefix
 
 ## Dependencies
 
-- `iproute2` package
+- `iproute2` package (for the `ip` command)
 - `requests` and `psutil` Python modules
 
 ## Usage
@@ -72,6 +72,16 @@ Go to the [API Tokens](https://dash.cloudflare.com/profile/api-tokens) tab of yo
 Go to the [Cloudflare dashboard](https://dash.cloudflare.com) and click your domain name in the *Websites* tab. Take note of the zone ID in the *API* section of the *Overview* tab. It will be passed to the `--zone_id` argument.
 
 Use `check_dns_record.py` to check the DNS records of the domain name. Look for the newly created AAAA record and take note of its `id`. It will be passed to the `--record_id` argument.
+
+### Check the name of the network interface
+
+In the terminal, check the network interfaces and their IPv6 addresses by running:
+
+```bash
+ip -6 addr
+```
+
+Take note of the name of the desired interface with configurable global unicast IPv6 addresses. It will be passed to the `--interface` argument.
 
 ### Configure `crontab` to run the DDNS script periodically
 
