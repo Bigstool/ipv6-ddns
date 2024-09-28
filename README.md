@@ -1,6 +1,6 @@
 # IPv6 DDNS for Cloudflare DNS
 
-A Python script to ✨ generate new IPv6 address for the device upon IPv6 prefix change and 📝 update the corresponding Cloudflare DNS record to point to the new address.
+A Python script to ✨ generate new IPv6 address for the device upon IPv6 prefix change and 📝 update the corresponding Cloudflare DNS record to point to the new address 🙈 without using any online services to check the external IP address. Especially useful when behind a 🛰️ proxy server.
 
 ## Requirements
 
