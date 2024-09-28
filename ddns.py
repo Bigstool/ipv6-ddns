@@ -222,8 +222,6 @@ def main():
     parser.add_argument('-v', '--verbose', action='store_true', help='Print the debug messages')
     args = parser.parse_args()
 
-    assert (args.preferred_lft == args.valid_lft == -1) or (0 < args.preferred_lft <= args.valid_lft), \
-           'preferred_lft must be greater than 0 and less than or equal to valid_lft or both must be -1'
     assert args.service in ['icanhazip', 'ipify', 'ipinfo'], f'Invalid service: {args.service}. ' \
                                                              f'Valid services are "icanhazip", "ipify", and "ipinfo"'
 
